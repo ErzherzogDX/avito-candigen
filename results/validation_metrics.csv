@@ -1,0 +1,13 @@
+stage,name,dR@50,dR@50loc,dR@35wloc,R@50,R@50w,R@35,R@35w
+dense,e5s_T,0.3947,0.8307,0.7894,,,,
+dense,e5b_T,0.3865,0.8287,0.7889,,,,
+dense,e5l_T,0.4236,0.8585,0.8183,,,,
+dense,ubge_T,0.4008,0.8445,0.8006,,,,
+dense,qwen06_T,0.4071,0.8599,0.8227,,,,
+dense,qwen06_T_hardneg,0.3761,0.8779,0.8377,,,,
+pipeline,P0_e5s,,,,0.9443,0.9403,0.9288,0.9261
+pipeline,P1_qwen06_hn,,,,0.9541,0.9525,0.9401,0.939
+pipeline,P2_qwen06_hn+e5s,,,,0.9549,0.9524,0.9409,0.939
+stage1,P2_qwen06_hn+e5s (OOF-folds on val),,,,0.9526,0.951,0.9426,0.9405
+ce-only,cross-encoder score on stage-1 top-K,,,,0.6657,0.6756,0.5265,0.5372
+stage2,P2_qwen06_hn+e5s+CE,,,,0.9533,0.9508,0.9426,0.9407

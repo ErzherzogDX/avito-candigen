@@ -1,0 +1,16 @@
+# Python 3.12. torch ставится отдельно под свою версию CUDA: https://pytorch.org/get-started/locally/
+# (решение обучалось на torch 2.x + CUDA, 1x RTX PRO 6000 96 ГБ; локальные эксперименты — torch 2.14 на Apple M4)
+torch>=2.5
+transformers>=4.51        # Qwen3-Embedding требует >= 4.51 (проверено на 5.17)
+safetensors
+lightgbm>=4.0             # проверено на 4.7.0
+pystemmer>=2.2            # Snowball-стеммер (C), проверено на 3.1.0
+scikit-learn>=1.3         # TF-IDF символьных n-грамм, GroupKFold
+scipy>=1.11
+numpy>=1.26
+pandas>=2.1               # проверено на 3.0.6
+pyarrow>=14
+threadpoolctl
+huggingface_hub
+jupyterlab
+ipykernel
